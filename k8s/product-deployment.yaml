@@ -14,9 +14,12 @@ spec:
     spec:
       containers:
         - name: product
-          image: 511621129377.dkr.ecr.eu-west-2.amazonaws.com/my-project:product-service:latest
+          image: 511621129377.dkr.ecr.eu-west-2.amazonaws.com/my-project:latest
           ports:
             - containerPort: 5000
+      imagePullSecrets:
+        - name: ecr-creds
+           
 
 ---
 apiVersion: v1
